@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const links = [
@@ -29,11 +30,19 @@ export default function Nav() {
     >
       <div className="bg-gradient-to-b from-[#1c272c]/20 to-transparent">
         <div className="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
-          <Link
-            href="#hero"
-            className="text-xl font-bold text-[#b9ffe8] tracking-tighter font-headline hover:text-primary transition-colors"
-          >
-            Zeerak Labs
+          <Link href="#hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Image
+              src="/logo-mark.png"
+              alt=""
+              width={40}
+              height={40}
+              priority
+              className="h-9 w-auto"
+            />
+            <span style={{ fontFamily: 'Helvetica, Arial, sans-serif', fontWeight: 700 }} className="text-lg tracking-tight">
+              <span style={{ color: '#e9f6f5' }}>Zeerak</span>
+              <span style={{ color: '#a2d9d1' }}> Labs</span>
+            </span>
           </Link>
 
           <div className="hidden md:flex gap-10 items-center">
