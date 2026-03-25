@@ -74,7 +74,7 @@ export default function Hero() {
           src="/logo-mark.svg"
           alt=""
           aria-hidden="true"
-          className="w-full opacity-[0.06]"
+          className="w-full opacity-[0.18]"
         />
       </div>
     </section>

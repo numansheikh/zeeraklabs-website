@@ -14,14 +14,18 @@ export default function Footer() {
     <footer className="w-full bg-[#0c1518] border-t border-[#41494d]/20 py-10 px-12">
       <div className="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="flex flex-col gap-4 items-center md:items-start">
-          <Link href="#hero" className="hover:opacity-80 transition-opacity">
+          <Link href="#hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <Image
-              src="/logo.svg"
-              alt="Zeerak Labs"
-              width={130}
-              height={62}
-              className="h-10 w-auto"
+              src="/logo-mark.svg"
+              alt=""
+              width={36}
+              height={36}
+              className="h-9 w-auto"
             />
+            <span style={{ fontFamily: 'Helvetica, Arial, sans-serif', fontWeight: 400, fontSize: '1.35em', letterSpacing: '-0.01em' }}>
+              <span style={{ color: '#15ffd1' }}>Zeerak</span>
+              <span style={{ color: '#ffffff' }}> Labs</span>
+            </span>
           </Link>
           <p className="font-inter text-sm tracking-wide text-[#6e777a]">
             © {new Date().getFullYear()} Zeerak Labs. All rights reserved.

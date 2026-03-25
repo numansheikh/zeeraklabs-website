@@ -30,15 +30,19 @@ export default function Nav() {
     >
       <div className="bg-gradient-to-b from-[#1c272c]/20 to-transparent">
         <div className="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
-          <Link href="#hero" className="flex items-center hover:opacity-80 transition-opacity">
+          <Link href="#hero" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <Image
-              src="/logo.svg"
-              alt="Zeerak Labs"
-              width={204}
-              height={74}
+              src="/logo-mark.svg"
+              alt=""
+              width={40}
+              height={40}
               priority
-              className="h-9 w-auto"
+              className="h-10 w-auto"
             />
+            <span style={{ fontFamily: 'Helvetica, Arial, sans-serif', fontWeight: 400, fontSize: '1.35em', letterSpacing: '-0.01em' }}>
+              <span style={{ color: '#15ffd1' }}>Zeerak</span>
+              <span style={{ color: '#ffffff' }}> Labs</span>
+            </span>
           </Link>
 
           <div className="hidden md:flex gap-10 items-center">
