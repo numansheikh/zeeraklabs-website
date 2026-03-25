@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Colors */
+  --color-primary: #15ffd1;
+  --color-primary-container: #004d40;
+  --color-on-primary: #00372e;
+  --color-on-primary-container: #b9ffe8;
+  --color-secondary: #a2d1ca;
+  --color-secondary-container: #1c272c;
+  --color-on-secondary: #0c3732;
+  --color-surface: #070f12;
+  --color-on-surface: #e0e3e1;
+  --color-surface-container: #121d21;
+  --color-surface-container-low: #0c1518;
+  --color-surface-container-high: #1c272c;
+  --color-surface-container-highest: #273236;
+  --color-background: #070f12;
+  --color-outline: #899390;
+  --color-outline-variant: #41494d;
+  --color-on-surface-variant: #6e777a;
+
+  /* Fonts */
+  --font-headline: var(--font-jakarta), sans-serif;
+  --font-body: var(--font-jakarta), sans-serif;
+  --font-label: var(--font-jakarta), sans-serif;
+  --font-inter: var(--font-inter-var), sans-serif;
+
+  /* Border radius */
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-on-surface);
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-family: 'Material Symbols Outlined';
+}
+
+/* Custom utilities */
+.glass-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(21, 255, 209, 0.08) 0%,
+    rgba(21, 255, 209, 0.02) 100%
+  );
+  backdrop-filter: blur(24px);
+}
+
+.text-glow {
+  text-shadow: 0 0 30px rgba(21, 255, 209, 0.4);
+}
+
+.hero-mesh {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(21, 255, 209, 0.1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(21, 255, 209, 0.05) 0, transparent 50%);
+}
+
+.cyan-border-gradient {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#121d21, #121d21) padding-box,
+    linear-gradient(to bottom right, #15ffd1, transparent) border-box;
 }
