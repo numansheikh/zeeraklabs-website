@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 
 export default function Hero() {
   return (
@@ -11,27 +10,10 @@ export default function Hero() {
     >
       <div className="max-w-screen-2xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8">
-          {/* Large wordmark — fades in first as a brand anchor */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-10"
-          >
-            <Image
-              src="/logo.svg"
-              alt="Zeerak Labs"
-              width={320}
-              height={155}
-              priority
-              className="h-20 w-auto"
-            />
-          </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8"
           >
             <span className="relative flex h-2 w-2">
@@ -86,9 +68,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Floating decorative panel */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/4 h-2/3 hidden lg:block opacity-30">
-        <div className="w-full h-full glass-gradient rounded-l-3xl border-l border-y border-primary/20" />
+      {/* Large ghosted Z mark — background geometry, not a second logo */}
+      <div className="absolute right-[-60px] top-1/2 -translate-y-1/2 w-[520px] hidden lg:block pointer-events-none select-none">
+        <img
+          src="/logo-mark.svg"
+          alt=""
+          aria-hidden="true"
+          className="w-full opacity-[0.06]"
+        />
       </div>
     </section>
   )

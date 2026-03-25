@@ -34,10 +34,10 @@ export default function Nav() {
             <Image
               src="/logo.svg"
               alt="Zeerak Labs"
-              width={155}
+              width={204}
               height={74}
               priority
-              className="h-12 w-auto"
+              className="h-9 w-auto"
             />
           </Link>
 
