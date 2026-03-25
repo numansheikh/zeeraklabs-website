@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 258.09 124">
+  <defs>
+    <style>
+      .cls-1 { fill: #72c8b7; }
+      .cls-2 { stroke-width: 3px; }
+      .cls-2, .cls-3 { fill: none; stroke: #72c8b7; }
+      .cls-3 { opacity: .4; stroke-width: 1.5px; }
+      .cls-3, .cls-4, .cls-5 { isolation: isolate; }
+      .cls-4, .cls-5 { fill: #00b695; font-family: Helvetica-Bold, Helvetica; font-size: 36px; font-weight: 700; }
+      .cls-5 { opacity: .7; }
+    </style>
+  </defs>
+  <path class="cls-2" d="M32,22h60l-60,80h60"/>
+  <line class="cls-3" x1="62" y1="22" x2="62" y2="2"/>
+  <line class="cls-3" x1="32" y1="62" x2="2" y2="62"/>
+  <line class="cls-3" x1="92" y1="62" x2="122" y2="62"/>
+  <line class="cls-3" x1="62" y1="102" x2="62" y2="122"/>
+  <circle class="cls-1" cx="62" cy="2" r="2"/>
+  <circle class="cls-1" cx="2" cy="62" r="2"/>
+  <circle class="cls-1" cx="122" cy="62" r="2"/>
+  <circle class="cls-1" cx="62" cy="122" r="2"/>
+  <text class="cls-4" transform="translate(142 60)"><tspan x="0" y="0">Zeerak</tspan></text>
+  <text class="cls-5" transform="translate(142 94)"><tspan x="0" y="0">Labs</tspan></text>
+</svg>

@@ -19,12 +19,12 @@ export default function Hero() {
             className="mb-10"
           >
             <Image
-              src="/logo-wordmark.png"
+              src="/logo.svg"
               alt="Zeerak Labs"
               width={320}
-              height={100}
+              height={155}
               priority
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </motion.div>
 

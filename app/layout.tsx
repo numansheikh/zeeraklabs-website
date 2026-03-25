@@ -21,9 +21,8 @@ export const metadata: Metadata = {
   description:
     'A multi-disciplinary studio bridging frontier research, autonomous agency, and high-performance software.',
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: '/logo-mark.svg',
+    shortcut: '/logo-mark.svg',
   },
   openGraph: {
     title: 'Zeerak Labs | Shaping the Kinetic Era',
@@ -31,7 +30,6 @@ export const metadata: Metadata = {
       'A multi-disciplinary studio bridging frontier research, autonomous agency, and high-performance software.',
     url: 'https://zeeraklabs.com',
     siteName: 'Zeerak Labs',
-    images: [{ url: '/og-logo.png', width: 256, height: 256, alt: 'Zeerak Labs' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -40,7 +38,6 @@ export const metadata: Metadata = {
     title: 'Zeerak Labs | Shaping the Kinetic Era',
     description: 'Engineering the Intelligence of Tomorrow.',
     creator: '@zeeraklabs',
-    images: ['/og-logo.png'],
   },
   robots: { index: true, follow: true },
 }
