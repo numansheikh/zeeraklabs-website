@@ -25,8 +25,8 @@ Defined as Tailwind v4 CSS variables in `app/globals.css`.
 
 | Element | Hex |
 |---|---|
-| "Zeerak" wordmark text | `#e9f6f5` |
-| "Labs" wordmark text | `#a2d9d1` |
+| "Zeerak" wordmark text | `#15ffd1` (same as primary) |
+| "Labs" wordmark text | `#ffffff` |
 
 ---
 
@@ -71,7 +71,7 @@ The design uses very subtle rounding — almost sharp:
 Defined in `app/globals.css`:
 
 ### `.glass-gradient`
-Semi-transparent cyan tint with backdrop blur. Used on the CTA/contact block and the hero decorative panel.
+Semi-transparent cyan tint with backdrop blur. Used on the CTA/contact block.
 
 ### `.text-glow`
 `text-shadow` in primary cyan. Used on the hero "Intelligence" word.
@@ -86,22 +86,23 @@ Gradient border effect using `padding-box` / `border-box` trick. Used on Researc
 
 ## Logo Assets
 
-All assets in `public/`:
+All assets in `public/` — SVG only, no raster images:
 
 | File | Description | Use Where |
 |---|---|---|
-| `logo-mark.png` | Z mark only, transparent, for dark bg | Nav, Footer (paired with text) |
-| `logo-wordmark.png` | Full horizontal wordmark, transparent, for dark bg | Hero section |
-| `logo.png` | Full logo, transparent on dark bg | General purpose |
-| `favicon.png` | 32px favicon | `<head>` |
-| `og-logo.png` | 256px black-bg logo | Open Graph / Twitter card |
+| `logo-mark.svg` | Z mark only, `#15ffd1`, viewBox `0 0 124 124` | Nav, Footer (paired with inline JSX text), favicon |
+| `logo.svg` | Full logo: Z mark + "Zeerak Labs" wordmark, viewBox `0 0 340 124` | General purpose |
 
-Source files are in `/Users/numan/Documents/ZeerakTech/logo-v1/`. The naming convention there:
-- `1black-bg` — full logo on black background
-- `2transparent-for-white-bg` — transparent, for light surfaces
-- `3transparent-for-black-bg` — transparent, for dark surfaces ← used on this site
-- `4white-bg` — full logo on white background
-- `1logo-only` — Z mark only, no wordmark text
+### Hero animated Z mark
+The hero watermark is not an asset file — it is an inline `<svg>` in `components/Hero.tsx` with Framer Motion animations:
+- Z stroke draws itself on load via `pathLength` animation
+- 4 tick lines extend from Z corners to edge nodes
+- Signal pulse (small circle) travels from Z → along tick line → to dot
+- Dot glows (opacity only, no size change) + ripple ring on arrival
+- SVG viewBox: `-15 -15 154 154` (extra padding for ripple ring overflow)
+- 4 nodes fire independently, 11s cycle, staggered initial delays
+
+Source SVG files are in `/Users/numan/Documents/ZeerakTech/logo-v1/`.
 
 ---
 

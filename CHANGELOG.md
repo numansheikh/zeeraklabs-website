@@ -18,6 +18,36 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
+## [0.4.0] — 2026-03-26
+
+### Changed
+- Hero Z mark: signal bead now travels strictly along tick line (fixed radius, no float effect)
+- Hero Z mark: endpoint dots glow in place — opacity-only animation, no size/position change
+- Hero Z mark: ripple ring emanates from dot on signal arrival, no longer clipped
+- SVG viewBox expanded from `-5 -5 134 134` to `-15 -15 154 154` to accommodate ring overflow
+
+---
+
+## [0.3.0] — 2026-03-26
+
+### Added
+- Animated Z mark watermark in hero section — fully vector SVG, no video/GIF
+  - Z stroke draws itself on load (pathLength animation)
+  - 4 tick lines extend from Z corners/midpoints to edge nodes
+  - Signal pulse travels from Z stroke → along tick line → to endpoint dot
+  - Dot glows on arrival with expanding ripple ring
+  - 4 nodes fire independently with staggered delays (2.1s, 3.7s, 5.6s, 7.9s), 11s cycle
+- Tick lines briefly brighten as signal passes over them
+
+### Changed
+- Replaced hero wordmark logo with animated Z mark (removed visual repetition with nav)
+- Unified all green/teal shades to single `#15ffd1`; "Labs" wordmark text changed to `#ffffff`
+- Nav/footer logo: switched to `logo-mark.svg` (Z mark only) + inline JSX text for full size control
+- Logo text: Helvetica weight 400, size 1.35em, single line ("Zeerak" cyan / "Labs" white)
+- All PNG logo assets replaced with SVG (`logo.svg`, `logo-mark.svg`)
+
+---
+
 ## [0.2.0] — 2026-03-25
 
 ### Added
